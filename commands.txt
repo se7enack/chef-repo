@@ -1,0 +1,5 @@
+knife ssl fetch
+knife bootstrap node1 -x root -P password123 -N node1
+knife cookbooks create motd
+knife cookbook upload motd
+knife node run_list add node1 "recipe[motd]"
